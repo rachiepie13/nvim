@@ -19,3 +19,13 @@ vim.cmd([[
   highlight NormalFloat guibg=NONE
   highlight FloatBorder guibg=NONE
 ]])
+
+-- Tabs = 4 spaces everywhere
+vim.opt.tabstop = 4 -- how many spaces a tab counts for
+vim.opt.shiftwidth = 4 -- indentation size
+vim.opt.softtabstop = 4 -- spaces inserted when pressing Tab
+vim.opt.expandtab = true -- use spaces instead of actual tabs
+
+vim.cmd([[
+  autocmd FileType * setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandtab
+]])
